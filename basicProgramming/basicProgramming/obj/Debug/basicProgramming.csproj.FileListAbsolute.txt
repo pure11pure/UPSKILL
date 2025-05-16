@@ -1,0 +1,7 @@
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\bin\Debug\basicProgramming.exe.config
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\bin\Debug\basicProgramming.exe
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\bin\Debug\basicProgramming.pdb
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\obj\Debug\basicProgramming.csproj.AssemblyReference.cache
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\obj\Debug\basicProgramming.csproj.CoreCompileInputs.cache
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\obj\Debug\basicProgramming.exe
+D:\UrangOtan_p\CODE\language\basicProgramming\basicProgramming\obj\Debug\basicProgramming.pdb
