@@ -11,6 +11,7 @@
                 type="text"
                 id="title"
                 name="title"
+                [(ngModel)]="enteredTitle"
             >
         </p>
 
@@ -21,9 +22,9 @@
                 id="summary"
                 rows="5"
                 name="summary"
+                [(ngModel)]="enteredSummary"
             ></textarea>
         </p>
-
 
 
         <p>
@@ -32,9 +33,9 @@
                 type="date"
                 id="due-date"
                 name="due-date"
+                [(ngModel)]="enteredDueDate"
             >
         </p>
-
 
 
         <p class="actions">
