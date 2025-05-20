@@ -3,11 +3,11 @@ export interface Task {
     userId: string;
     title: string;
     summury: string;
-    dueDate: string;
+    date: string;
 }
 
 export interface NewTaskData {
     title: string;
     summary: string;
-    dueDate: string;
+    date: string;
 }

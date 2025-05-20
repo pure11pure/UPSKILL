@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task.component";
 import { NewTaskComponent } from "./new-task/new-task.component";
-import { type NewTaskData } from './task/task.model';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -16,55 +16,19 @@ export class TasksComponent {
   @Input({ required: true }) name?: string;
   isAddingTask: boolean = false;
 
-  tasks = [
-    {
-      id: 't1',
-      userId: 'u1',
-      title: 'Master Angualar',
-      summury: 'Learn all the basic and advanced feature of angular & how to apply them.',
-      dueDate: '2025-12-31'
-    },
-    {
-      id: 't2',
-      userId: 'u3',
-      title: 'Build first prototype',
-      summury: 'Build a first prototype of the online shop website.',
-      dueDate: '2025-12-31'
-    },
-    {
-      id: 't3',
-      userId: 'u3',
-      title: 'Prepare issue template',
-      summury: 'Prepare and describe an issue template which will help with management.',
-      dueDate: '2025-12-31'
-    }
-  ]
-
-  get selectedUserTasks() {
-    return this.tasks.filter((task) => task.userId === this.userId);
+  constructor(private tasksService: TasksService) {
   }
 
-  onCompleteTask(id: string) {
-    this.tasks = this.tasks.filter((task) => task.id !== id);
+  get selectedUserTasks() {
+    return this.tasksService.getUserTasks(this.userId);
   }
 
   onStartAddTask() {
     this.isAddingTask = true;
   }
 
-  onCancelAddTask() {
+  onCloseAddTask() {
     this.isAddingTask = false;
   }
 
-  onAddTask(taskData: NewTaskData) {
-    // push(tail) / unshift(head)
-    this.tasks.unshift({
-      id: new Date().getTime().toString(),
-      userId: this.userId,
-      title: taskData.title,
-      summury: taskData.summary,
-      dueDate: taskData.dueDate
-    })
-    this.isAddingTask = false;
-  }
 }
