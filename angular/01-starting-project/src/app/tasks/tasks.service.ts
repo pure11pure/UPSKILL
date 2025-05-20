@@ -9,23 +9,30 @@ export class TasksService {
             userId: 'u1',
             title: 'Master Angualar',
             summury: 'Learn all the basic and advanced feature of angular & how to apply them.',
-            date: '2025-12-31'
+            dueDate: '2025-12-31'
         },
         {
             id: 't2',
             userId: 'u3',
             title: 'Build first prototype',
             summury: 'Build a first prototype of the online shop website.',
-            date: '2025-12-31'
+            dueDate: '2025-12-31'
         },
         {
             id: 't3',
             userId: 'u3',
             title: 'Prepare issue template',
             summury: 'Prepare and describe an issue template which will help with management.',
-            date: '2025-12-31'
+            dueDate: '2025-12-31'
         }
     ]
+
+    constructor() {
+        const tasks = localStorage.getItem('tasks');
+        if (tasks) {
+            this.tasks = JSON.parse(tasks);
+        }
+    }
 
 
     getUserTasks(userId: string) {
@@ -39,12 +46,18 @@ export class TasksService {
             userId: userId,
             title: taskData.title,
             summury: taskData.summary,
-            date: taskData.date
+            dueDate: taskData.date
         })
+        this.saveTasks();
     }
 
     removeTask(id: string) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
+        this.saveTasks();
+    }
+
+    private saveTasks() {
+        localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
 
 }

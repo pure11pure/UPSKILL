@@ -3,7 +3,7 @@ export interface Task {
     userId: string;
     title: string;
     summury: string;
-    date: string;
+    dueDate: string;
 }
 
 export interface NewTaskData {
