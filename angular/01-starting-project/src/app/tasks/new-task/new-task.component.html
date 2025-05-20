@@ -4,7 +4,7 @@
 ></div>
 <dialog open>
     <h2>Add Task</h2>
-    <form>
+    <form (ngSubmit)="onSubmit()">
         <p>
             <label for="title">Title</label>
             <input
@@ -14,6 +14,7 @@
                 [(ngModel)]="enteredTitle"
             >
         </p>
+
 
 
         <p>
@@ -27,6 +28,7 @@
         </p>
 
 
+
         <p>
             <label for="due-date">Due Date</label>
             <input
@@ -36,6 +38,7 @@
                 [(ngModel)]="enteredDueDate"
             >
         </p>
+
 
 
         <p class="actions">
