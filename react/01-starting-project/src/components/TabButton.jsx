@@ -1,4 +1,4 @@
-export function TabButton({ children, onSelect, isSelected }) {
+export default function TabButton({ children, onSelect, isSelected }) {
     // document.querySelector('button').addEventListener('click', () => {
     // }}
 

@@ -6,7 +6,7 @@ function genRandomInt(max) {
     return Math.floor(Math.random() * (max));
 }
 
-export function Header() {
+export default function Header() {
     const description = reactDescriptions[genRandomInt(reactDescriptions.length)]
 
     return (
