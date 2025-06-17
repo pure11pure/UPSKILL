@@ -9,13 +9,9 @@
 
 <body>
     <form action="index.php" method="post">
-        <label>x:</label>
-        <input type="text" name="x"><br>
-        <label>y:</label>
-        <input type="text" name="y"><br>
-        <label>z:</label>
-        <input type="text" name="z"><br>
-        <input type="submit" value="total">
+        <label>radius: </label>
+        <input type="text" name="radius">
+        <input type="submit" value="calculate">
 
     </form>
 </body>
@@ -25,27 +21,21 @@
 
 
 <?php
+    $radius = $_POST["radius"];
+    $circumference = null;
+    $area = null;
+    $volume = null;
 
-    $x = $_POST["x"];
-    $y = $_POST["y"];
-    $z = $_POST["z"];
-    $total = null;
+    $circumference = 2 * pi() * $radius;
+    $circumference = round($circumference, 2);
 
-    // $total = abs($x);
-    // $total = round($x); //ปัดเศษขึ้นหรือลง
-    // $total = floor($x); //ปัดเศษทิ้งหมด
-    // $total = ceil($x); //ปัดเศษขึ้นหมด
-    // $total = sqrt($x);
+    $area = pi() * pow($radius , 2);
+    $area = round($area, 2);
 
-    // $total = pow($x, $y); //ยกกำลัง
+    $volume = 4/3 * pi() * pow($radius , 3);
+    $volume = round($volume, 2);
 
-    // $total = max($x, $y, $z);
-    // $total = min($x, $y, $z);
-    // $total = pi();
-    // $total = rand();
-    // $total = rand(1,6);
-    // $total = rand(10, 100);
-
-    echo $total;
-
+    echo "Circumference = {$circumference} cm <br>";
+    echo "Area = {$area} cm^2 <br>";
+    echo "Volume = {$volume} cm^3 <br>";
 ?>
