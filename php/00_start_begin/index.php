@@ -9,18 +9,34 @@
 
 <body>
     <!-- <form action="index.php" method="get"> -->
-    <form action="index.php" method="post">
+    <!-- <form action="index.php" method="post">
         <label>username: </label><br>
         <input type="text" name="username"><br>
         <label>password: </label><br>
         <input type="password" name="password"><br>
         <input type="submit" value="log in">
+    </form> -->
+    <form action="index.php" method="get">
+        <label>quantity: </label><br>
+        <input type="text" name="quantity">
+        <input type="submit" value="total">
     </form>
 </body>
 
 </html>
 
 <?php
+
+    $item = "pizza";
+    $price = 5.99;
+    $quantity = $_GET["quantity"];
+    $total = null;
+
+    $total = $quantity *  $price;
+
+    echo "You have ordered \${$quantity} x {$item}/s <br>";
+    echo "Your total is : \${$total}";
+
 
     //$_GET =>  Date is appended to the url
     //          NOT SECURE 
@@ -35,6 +51,6 @@
     //          GET requests are not cached
     //          Better for submitting credentials  
 
-    echo "{$_POST["username"]} <br>" ;
-    echo "{$_POST["password"]} <br>";
+    // echo "{$_POST["username"]} <br>" ;
+    // echo "{$_POST["password"]} <br>";
 ?>
