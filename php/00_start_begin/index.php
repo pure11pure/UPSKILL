@@ -1,41 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <form action="index.php" method="post">
-        <label>radius: </label>
-        <input type="text" name="radius">
-        <input type="submit" value="calculate">
-
-    </form>
-</body>
-
-</html>
-
-
-
 <?php
-    $radius = $_POST["radius"];
-    $circumference = null;
-    $area = null;
-    $volume = null;
+    $age = 101;
 
-    $circumference = 2 * pi() * $radius;
-    $circumference = round($circumference, 2);
-
-    $area = pi() * pow($radius , 2);
-    $area = round($area, 2);
-
-    $volume = 4/3 * pi() * pow($radius , 3);
-    $volume = round($volume, 2);
-
-    echo "Circumference = {$circumference} cm <br>";
-    echo "Area = {$area} cm^2 <br>";
-    echo "Volume = {$volume} cm^3 <br>";
+    if($age >= 100){
+        echo "You are too old to enter this site";
+    }
+    elseif($age <= 0){
+        echo "That wasn't a valid age";
+    }
+    elseif($age >= 18){
+        echo "You may enter this site";
+    }
+    else{
+        echo "You must be 18+ to enter";
+    }
 ?>
