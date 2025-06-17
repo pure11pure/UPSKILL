@@ -8,49 +8,44 @@
 </head>
 
 <body>
-    <!-- <form action="index.php" method="get"> -->
-    <!-- <form action="index.php" method="post">
-        <label>username: </label><br>
-        <input type="text" name="username"><br>
-        <label>password: </label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="log in">
-    </form> -->
-    <form action="index.php" method="get">
-        <label>quantity: </label><br>
-        <input type="text" name="quantity">
+    <form action="index.php" method="post">
+        <label>x:</label>
+        <input type="text" name="x"><br>
+        <label>y:</label>
+        <input type="text" name="y"><br>
+        <label>z:</label>
+        <input type="text" name="z"><br>
         <input type="submit" value="total">
+
     </form>
 </body>
 
 </html>
 
+
+
 <?php
 
-    $item = "pizza";
-    $price = 5.99;
-    $quantity = $_GET["quantity"];
+    $x = $_POST["x"];
+    $y = $_POST["y"];
+    $z = $_POST["z"];
     $total = null;
 
-    $total = $quantity *  $price;
+    // $total = abs($x);
+    // $total = round($x); //ปัดเศษขึ้นหรือลง
+    // $total = floor($x); //ปัดเศษทิ้งหมด
+    // $total = ceil($x); //ปัดเศษขึ้นหมด
+    // $total = sqrt($x);
 
-    echo "You have ordered \${$quantity} x {$item}/s <br>";
-    echo "Your total is : \${$total}";
+    // $total = pow($x, $y); //ยกกำลัง
 
+    // $total = max($x, $y, $z);
+    // $total = min($x, $y, $z);
+    // $total = pi();
+    // $total = rand();
+    // $total = rand(1,6);
+    // $total = rand(10, 100);
 
-    //$_GET =>  Date is appended to the url
-    //          NOT SECURE 
-    //          GET requests can be cached
-    //          Better for a search page
+    echo $total;
 
-    // echo "{$_GET["username"]} <br>" ;
-    // echo "{$_GET["password"]} <br>"; 
-    
-    //$_POST =>  Date is packaged inside the body of the HTTP request
-    //          MORE SECURE 
-    //          GET requests are not cached
-    //          Better for submitting credentials  
-
-    // echo "{$_POST["username"]} <br>" ;
-    // echo "{$_POST["password"]} <br>";
 ?>
