@@ -1,37 +1,26 @@
 <?php
-    $name = "Bro";
-    $food = "pizza";
-    $email = "fake@gmail.com";
+   $x = 10;
+   $y = 3;
+   $z = null;
 
-    $age = 21;
-    $users = 2;
-    $quantity = 4;
+//    $z = $x + $y;
+//    $z = $x - $y;
+//    $z = $x * $y;
+//    $z = $x / $y;
+//    $z = $x ** $y;
+//    $z = $x % $y;
+//    echo $z;
 
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
+    $counter = 5;
 
-    $employed = true;
-    $online = false;
-    $for_sale = true;
+    // $counter = $counter + 1;
+    // $counter++;
+    // $counter--;
+    // $counter+=3;
+    // $counter-=3;
+    // echo $counter; 
 
-    $total = null;
+    $total = 1 + 2 -3 *4 / 5 ** 6;
 
-    echo "Hello {$name} <br>";
-    echo "You like {$food} <br>";
-    echo "Your email is {$email} <br>";
-    
-    echo "you are {$age} years old <br>";
-    echo "There are {$users} users online <br>";
-    echo "You would like to buy {$quantity} items <br>";
-
-    echo "your gpa is : {$gpa} <br>";
-    echo "You pizza is \${$price} <br>";
-    echo "The sales tax rate is : {$tax_rate} % <br>";
-
-    echo "Online status : {$online} <br>";
-
-    echo "You have ordered {$quantity} x {$food}s <br>";
-    $total = $quantity * $price;
-    echo "Your total is: \${$total}";
+    echo $total;
 ?>
