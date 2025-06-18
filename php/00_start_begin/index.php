@@ -1,17 +1,32 @@
 <?php 
 
-    $child = true;
-    $senior = false;
-    $ticket = null;
+    $date = date("l");
 
-    if($child || $senior){
-        $ticket = 10;
+    switch($date){
+        case "Monday":
+            echo "I hate Mondays.";
+            break;
+        case "Tuesday":
+            echo "It is Taco Tuesday.";
+            break;
+        case "Wednesday":
+            echo "The work week is half over!";
+            break;
+        case "Thursday":
+            echo "It's almost the weekend.";
+            break;
+        case "Friday":
+            echo "The weenend is here!";
+            break;
+        case "Saturday":
+            echo "Time to party!";
+            break;
+        case "Sunday":
+            echo "Time to relax.";
+            break;
+        default:
+            echo "{$date} is not a day";
     }
-    else{
-        $ticket = 15;
-    }
-
-    echo "The ticket price is \${$ticket}";
 
 ?>
 
@@ -19,89 +34,56 @@
 
 <!-- <?php 
 
-    $age = 25;
-    $citizen = true;
+// ถ้าไม่ break มันจะทำตามเคสข้างล่างจากมันทั้งหมด
 
-    if(!$age >= 18 || !$citizen){
-        echo "You cannot vote";
-    }
-    else{
-        echo "You can vote";
-    }
+      $grade = "B";
 
-?> -->
-
-
-
-<!-- <?php 
-
-    $age = 25;
-    $citizen = true;
-
-    if($age >= 18 && $citizen){
-        echo "You can vote";
-    }
-    else{
-        echo "You cannot vote";
-    }
+      switch($grade){
+        case "A" : 
+            echo "You did great.";
+            break;
+        case "B" : 
+            echo "You did good.";
+            break;
+        case "C" : 
+            echo "You did okay.";
+            break;
+        case "D" : 
+            echo "You did poorly.";
+            break;
+        case "F" : 
+            echo "You failed.";
+            break;
+        default: 
+            echo "{$grade} is not valid.";
+      }
 
 ?> -->
 
 
 
 
+<!-- <?php
 
-<!-- <?php 
+    $grade = "A";
 
-    $temp = 15;
-    $cloudy = true;
-
-    if($temp < 0 || $temp > 30){
-        echo "The weather is bad. <br>";
+    if ($grade == "A") {
+        echo "You did great";
+    } 
+    elseif ($grade == "B") {
+        echo "You did good";
+    } 
+    elseif ($grade == "c") {
+        echo "You did okay";
+    } 
+    elseif ($grade == "d") {
+        echo "You did poorly";
+    } 
+    elseif ($grade == "F") {
+        echo "You failed";
     }
     else{
-        echo "The weather is good. <br>";
-    }
-
-    if(!$cloudy){
-        echo "It's sunny.";
-    }
-    else{
-        echo "It's cloudy.";
-    }
-
-?> -->
-
-
-
-
-
-
-<!-- <?php 
-
-    $temp = 15;
-
-    if($temp < 0 || $temp > 30){
-        echo "The weather is bad.";
-    }
-    else{
-        echo "The weather is good.";
-    }
-
-?> -->
-
-
-
-
-<!-- <?php 
-
-    $temp = 35;
-
-    if($temp >= 0 && $temp <= 30){
-        echo "The weather is good.";
-    }
-    else{
-        echo "The weather is bad.";
+        echo "{$grade} is not a valid grade.";
     }
 
 ?> -->
