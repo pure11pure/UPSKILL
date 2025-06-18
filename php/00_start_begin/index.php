@@ -1,27 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <label>Enter a country</label>
+        <input type="text" name="country" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
+
+
 <?php 
 
-    // $food_1 = "apple";
-    // $food_2 = "orange";
-    // $food_3 = "banana";
-    // $food_4 = "coconut";
+    $capitals =array("USA" => "Washington D.C." , 
+                    "Japan" => "Kyoto", 
+                    "South Korea" => "Seoul", 
+                    "India" => "New Delhi");
 
-    $foods = array("apple", "orange", "banana", "coconut");
+    $capital = $capitals[$_POST["country"]];
+    echo "The capital is <b>{$capital}";
 
-    // echo $foods[0] . "<br>";
-    // echo $foods[1] . "<br>";
-    // echo $foods[2] . "<br>";
-    // echo $foods[3] . "<br>";
+    /**
+     * 1
+     */
+    // $capitals["USA"] = "Las Vegas";
+    // $capitals["China"] = "Beijing";
+    // array_pop($capitals);
+    // array_shift($capitals);
+    // $capitals = array_flip($capitals);
+    // $capitals = array_reverse($capitals);
+    // echo count($capitals) . "<br>";
+    // foreach($capitals as $key => $value){
+    //     echo "{$key} = {$value} <br>";
+    // }
 
-    // array_push($foods, "pineapple", "kiwi");
-    // array_pop($foods);
-    // array_shift($foods);
-    // $foods = array_reverse($foods);
-    // echo count($foods);
 
-    foreach($foods as $food){
-        echo $food . "<br>";
-    }
-
+    /**
+     * 2
+     */
+    // $keys = array_keys($capitals);
+    // $values = array_values($capitals);
+    // foreach($values as $value){
+    //     echo "{$value}  <br>";
+    // }
 
 
 ?>
