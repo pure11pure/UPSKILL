@@ -9,87 +9,66 @@
 
 <body>
     <form action="index.php" method="post">
-        <label>username: </label>
-        <input type="text" name="username" /><br>
-        <label>password: </label>
-        <input type="password" name="password" /><br>
-        <input type="submit" name="login" value="Log in" />
+        <input type="radio" name="credit_card" value="Visa">Visa<br>
+        <input type="radio" name="credit_card" value="Mastercard">Mastercard<br>
+        <input type="radio" name="credit_card" value="American Express">American Express<br>
 
+        <input type="submit" name="confirm" value="confirm" />
     </form>
 </body>
 
 </html>
 
+
+
 <?php 
 
-    // $_POST[""];
+    if(isset($_POST["confirm"])){
 
-    /*
-    foreach($_POST as $key => $value){
-        echo "{$key} = {$value} <br>";
+        $credit_card = null;
 
-    }
-    */
-
-    /*
-    if(isset($_POST["login"])){
-        echo "You tried to login <br>";
-
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-
-        if(empty($username)){
-            echo "Username is <b> missing";
-        }
-        else{
-            echo "Hello {$username}";
+        if(isset($_POST["credit_card"])){
+            $credit_card = $_POST["credit_card"];
         }
 
+
+        /**
+         * 2
+         */
+        switch($credit_card){
+            case "Visa":
+                echo "You selected Visa";
+                break;
+            case "Mastercard":
+                echo "You selected Mastercard";
+                break;
+            case "American Express":
+                echo "You selected American Express";
+                break;
+            default:
+                echo "Please make a selection.";
+
+        }
+
+
+        /**
+         * 1
+         */
+        // if($credit_card == "Visa"){
+        //     echo "You selected Visa";
+        // }
+        // elseif($credit_card == "Mastercard"){
+        //     echo "You selected Mastercard";
+        // }
+        // elseif($credit_card == "American Express"){
+        //     echo "You selected American Express";
+        // }
+        // else{
+        //     echo "Please make a selection.";
+        // }
+
     }
-    */
+
+
 
 ?>
-
-
-
-
-<!-- (0) -->
-
-
-
-<!-- <?php 
-
-    // $username = "";
-    // $username = null;
-    // $username = true;
-    // $username = false;
-
-
-    echo empty($username) . "<br>";
-
-    if(empty($username)){
-        echo "This variable is empty";
-    }
-    else{
-        echo "This variable is NOT empty";
-    }
-
-?> -->
-
-
-
-<!-- <?php 
-
-    $username = "BroCode";
-    // $username = null;
-
-    echo isset($username) . "<br>";
-
-    if(isset($username)){
-        echo "This variable is set";
-    }
-    else{
-        echo "This variable is NOT set";
-    }
-
-?> -->
