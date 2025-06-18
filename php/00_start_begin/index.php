@@ -9,48 +9,87 @@
 
 <body>
     <form action="index.php" method="post">
-        <label>Enter a country</label>
-        <input type="text" name="country" />
-        <input type="submit" />
+        <label>username: </label>
+        <input type="text" name="username" /><br>
+        <label>password: </label>
+        <input type="password" name="password" /><br>
+        <input type="submit" name="login" value="Log in" />
+
     </form>
 </body>
 
 </html>
 
-
 <?php 
 
-    $capitals =array("USA" => "Washington D.C." , 
-                    "Japan" => "Kyoto", 
-                    "South Korea" => "Seoul", 
-                    "India" => "New Delhi");
+    // $_POST[""];
 
-    $capital = $capitals[$_POST["country"]];
-    echo "The capital is <b>{$capital}";
+    /*
+    foreach($_POST as $key => $value){
+        echo "{$key} = {$value} <br>";
 
-    /**
-     * 1
-     */
-    // $capitals["USA"] = "Las Vegas";
-    // $capitals["China"] = "Beijing";
-    // array_pop($capitals);
-    // array_shift($capitals);
-    // $capitals = array_flip($capitals);
-    // $capitals = array_reverse($capitals);
-    // echo count($capitals) . "<br>";
-    // foreach($capitals as $key => $value){
-    //     echo "{$key} = {$value} <br>";
-    // }
+    }
+    */
 
+    /*
+    if(isset($_POST["login"])){
+        echo "You tried to login <br>";
 
-    /**
-     * 2
-     */
-    // $keys = array_keys($capitals);
-    // $values = array_values($capitals);
-    // foreach($values as $value){
-    //     echo "{$value}  <br>";
-    // }
+        $username = $_POST["username"];
+        $password = $_POST["password"];
 
+        if(empty($username)){
+            echo "Username is <b> missing";
+        }
+        else{
+            echo "Hello {$username}";
+        }
+
+    }
+    */
 
 ?>
+
+
+
+
+<!-- (0) -->
+
+
+
+<!-- <?php 
+
+    // $username = "";
+    // $username = null;
+    // $username = true;
+    // $username = false;
+
+
+    echo empty($username) . "<br>";
+
+    if(empty($username)){
+        echo "This variable is empty";
+    }
+    else{
+        echo "This variable is NOT empty";
+    }
+
+?> -->
+
+
+
+<!-- <?php 
+
+    $username = "BroCode";
+    // $username = null;
+
+    echo isset($username) . "<br>";
+
+    if(isset($username)){
+        echo "This variable is set";
+    }
+    else{
+        echo "This variable is NOT set";
+    }
+
+?> -->
