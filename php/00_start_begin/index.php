@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    $password = "pizza";
 
-<body>
-    <!-- <form action="home.php" method="post"> -->
-    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        username: <br>
-        <input type="text" name="username" />
-        <input type="submit" />
-    </form>
-</body>
+    $hash = password_hash($password , PASSWORD_DEFAULT);
 
-</html>
+    // echo $hash;
 
-
-<?php
-
-    // foreach($_SERVER as $key => $value){
-    //     echo "{$key} = {$value} <br>";
-    // }
-
-
-    // if(isset($_POST["submit"])){
-
-    // }
-
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        echo "Hello";
+    if(password_verify("pizza1", $hash)){
+        echo "You are Logged in!";
     }
+    else {
+        echo "Incorrect password!";
+    }
+
 ?>
