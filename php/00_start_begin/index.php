@@ -1,9 +1,3 @@
-<?php
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,50 +8,29 @@ session_start();
 </head>
 
 <body>
-    <!-- This is the login page <br>
-    <a href="home.php">This goes to the home page</a><br> -->
-
-    <form action="index.php" method="post">
+    <!-- <form action="home.php" method="post"> -->
+    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         username: <br>
-        <input type="text" name="username" /><br>
-        password: <br>
-        <input type="text" name="password" /><br>
-
-        <input type="submit" name="login" value="login" />
-
-
+        <input type="text" name="username" />
+        <input type="submit" />
     </form>
 </body>
 
 </html>
 
+
 <?php
 
-// $_SESSION["username"] = "Pure";
-// $_SESSION["password"] = "pizza";
+    // foreach($_SERVER as $key => $value){
+    //     echo "{$key} = {$value} <br>";
+    // }
 
 
-// echo $_SESSION["username"] . "<br>";
-// echo $_SESSION["password"] . "<br>";
+    // if(isset($_POST["submit"])){
 
-if (isset($_POST["login"])) {
+    // }
 
-    if (
-        !empty($_POST["username"]) &&
-        !empty($_POST["password"])
-    ) {
-
-        $_SESSION["username"] = $_POST["username"];
-        $_SESSION["password"] = $_POST["password"];
-
-        // echo $_SESSION["username"] . "<br>";
-        // echo $_SESSION["password"] . "<br>";
-
-        header("Location: home.php");
-
-    }else {
-        echo "Missing username/password <br>";
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        echo "Hello";
     }
-}
-
 ?>
