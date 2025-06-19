@@ -1,52 +1,34 @@
-<?php
+<?php 
 
-    function hypotenuse($a, $b){
-        $c = sqrt($a **2 + $b ** 2);
-        return $c;
-    }
+    $username = "pure Punnaporn Monkey";
+    $phone = "123-456-7890";
 
-    echo hypotenuse(3,4);
+    // $username = strtolower($username);
+    // $username = strtoupper($username);
+    // $username = trim($username); //ลบช่องว่าง อักขระส่วนเกินหน้า-หลังสตริง
+    // $username = str_pad($username, 20, "/");
+    // $username = str_replace("-", "", $phone);
+    // $username = strrev($username);
+    // $username = str_shuffle($username);
+    // $equals = strcmp($username, "pure Punnaporn");
+    // $count = strlen($phone);
+    // $index = strpos($username, " ");
+    // $index = strpos($phone, "-");
+    // $firstname = substr($username, 0, 4);
+    // $lastname = substr($username, 5);
+    // echo $fullname;
+    
 
-
-    /**
-     * 3
-     */
-    // function is_even($number){
-    //     return $number % 2;
+    // $fullname = explode(" ", $username);
+    // foreach ($fullname as $name){
+    //     echo $name ."<br>";
     // }
 
-    // echo is_even(11) . "<br>";
-    // echo is_even(20) . "<br>";
-    // echo is_even(32) . "<br>";
+
+    $username1 = array("pure", "Punnaporn", "Monkey");
+
+    $username1 = implode("//", $username1);
+    echo $username1;
 
 
-    /**
-     * 2
-     */
-    // function happy_birthday($first_name, $age){
-    //     echo "Happy Birthday dear {$first_name}! <br>";
-    //     echo "Happy Birthday to you! <br>";
-    //     echo "Happy Birthday dear {$first_name}! <br>";
-    //     echo "You are {$age} years old <br><br>";
-    // }
-
-    // happy_birthday("pure", 22);
-    // happy_birthday("po", 12);
-    // happy_birthday("monkey", 6);
-
-
-    /**
-     * 1
-     */
-
-    // function happy_birthday(){
-    //     echo "Happy Birthday dear you! <br>";
-    //     echo "Happy Birthday to you! <br>";
-    //     echo "Happy Birthday dear you! <br>";
-    //     echo "You are x years old <br><br>";
-    // }
-
-    // happy_birthday();
-    // happy_birthday();
-    // happy_birthday();
 ?>
