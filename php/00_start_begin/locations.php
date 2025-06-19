@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    This is the <b>Home</b> Page<br>
-    Stuff about your home page can go here<br>
+    This is the <b>locations</b> Page<br>
+    Stuff about your locations page can go here<br>
 </body>
 
 </html>

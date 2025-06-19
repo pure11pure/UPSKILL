@@ -3,6 +3,7 @@
     include("header.html");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,13 @@
 </head>
 
 <body>
-    This is the <b>Home</b> Page<br>
-    Stuff about your home page can go here<br>
+    This is the <b>about</b> Page<br>
+    Stuff about your about page can go here<br>
 </body>
 
 </html>
+
+
 
 <?php 
 
