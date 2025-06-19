@@ -1,23 +1,63 @@
-<?php 
+<?php
 
-    // setcookie("fav_food", "pizza", time() + (86400 *2), "/");
-    setcookie("fav_food", "pizza", time() + 60 , "/"); // 60 วินาที
-    setcookie("fav_drink", "coffee", time() + (86400 *3), "/"); // 2 วัน
-    setcookie("fav_dessert", "ice cream", time() + (86400 *4), "/");
+session_start();
 
-    // foreach($_COOKIE as $key => $value){
-    //     echo "$key = $value <br>"; 
-    // }
+?>
 
-    if(isset($_COOKIE["fav_food"])){
-        echo "BUY SOME {$_COOKIE["fav_food"]} !!!";
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- This is the login page <br>
+    <a href="home.php">This goes to the home page</a><br> -->
+
+    <form action="index.php" method="post">
+        username: <br>
+        <input type="text" name="username" /><br>
+        password: <br>
+        <input type="text" name="password" /><br>
+
+        <input type="submit" name="login" value="login" />
+
+
+    </form>
+</body>
+
+</html>
+
+<?php
+
+// $_SESSION["username"] = "Pure";
+// $_SESSION["password"] = "pizza";
+
+
+// echo $_SESSION["username"] . "<br>";
+// echo $_SESSION["password"] . "<br>";
+
+if (isset($_POST["login"])) {
+
+    if (
+        !empty($_POST["username"]) &&
+        !empty($_POST["password"])
+    ) {
+
+        $_SESSION["username"] = $_POST["username"];
+        $_SESSION["password"] = $_POST["password"];
+
+        // echo $_SESSION["username"] . "<br>";
+        // echo $_SESSION["password"] . "<br>";
+
+        header("Location: home.php");
+
+    }else {
+        echo "Missing username/password <br>";
     }
-    else {
-        echo "I don't know your favorite food";
-    }
-
-
-
-
+}
 
 ?>
