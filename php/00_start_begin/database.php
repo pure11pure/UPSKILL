@@ -1,5 +1,7 @@
 <?php
 
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "root";
